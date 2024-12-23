@@ -1,0 +1,489 @@
+body {
+    width: 520px;
+    padding: 10px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.match_line {
+    background-color: #f7f7ff;
+    padding: 2px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+
+    img {
+        padding: 2px;
+    }
+
+    b {
+        width: 16%;
+        text-align: center;
+    }
+}
+
+.match_line:nth-child(2n) {
+    background-color: #fafaf2;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.popup-result {
+    visibility: hidden;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    border: 3px solid black;
+    left: 25%;
+    margin-left: -60px;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.popup-result.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+#end-result {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.finished-match {
+    font-size: 18px !important;
+    font-style: normal !important;
+}
+
+.status {
+    padding-left: 5px;
+}
+
+.spacer {
+    width: 31px;
+}
+
+#tournament-info {
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+.tournament_line {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    img {
+        display: inline;
+    }
+
+    h4 {
+        display: inline;
+        padding-left: 5px;
+        padding-right: 5px;
+        height: 24px;
+    }
+}
+
+#broadcast {
+    padding-left: 5px;
+}
+
+#match-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#match-status {
+    min-width: 100px;
+}
+
+.match_name {
+    width: 300px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-box {
+    width: 42%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.right-box {
+    width: 42%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.match-score {
+    width: 16%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.spacer-repeated {
+    width: 96%;
+    height: 20px;
+    background-color: #eee;
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+        linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size: 30px 10px;
+}
+
+.tables {
+    margin: auto;
+    width: 90%;
+}
+
+.date-picker {
+    position: absolute;
+    right: 15px;
+    background-color: #fafaf2;
+
+    span {
+        cursor: pointer;
+    }
+}
+
+
+input[type="date"] {
+    background-color: #fafaf2;
+    font-family: "Roboto Mono", monospace;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+    /* background-color: #ffffff; */
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* ********************************************************************************************************************************************************************* */
+
+
+/* FOR TABLE FROM SITE */
+td.results-table__zone._zone_color1 {
+    border-right-color: #7ca541;
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+td.results-table__zone._zone_color2 {
+    border-right-color: #f8c027;
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+td.results-table__zone._zone_color3 {
+    border-right-color: #91b8eb;
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+td.results-table__zone._zone_color4 {
+    border-right-color: #5082c5;
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+td.results-table__zone._zone_color5 {
+    border-right-color: #eb932f;
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+td.results-table__zone._zone_color6 {
+    border-right-color: #a3d865;
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+td.results-table__zone._zone_color7 {
+    border-right-color: #ee999d;
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+td.results-table__zone._zone_color8 {
+    border-right-color: #d51d2a;
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+td.results-table__zone._right,
+th.results-table__zone._right {
+    padding-right: 0px;
+}
+
+thead {
+    th {
+        font-size: 13px;
+    }
+}
+
+tbody {
+    td {
+        padding-left: 3px;
+        padding-right: 3px;
+
+        a {
+            cursor: auto;
+        }
+    }
+}
+
+._center {
+    text-align: center;
+}
+
+._hidden-td {
+    font-size: 12px;
+}
+
+.table-item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: center;
+    max-width: 100%;
+    vertical-align: top;
+    cursor: auto;
+}
+
+.table-item__logo._sm img {
+    height: 20px;
+}
+
+.table-item__logo .lazyload-placeholder {
+    background-color: #f2f2f2;
+    background-size: 50%;
+}
+
+.table-item__name {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td.results-table__zone .results-table__zone-bubble {
+    -webkit-animation: bubbleRight .1s ease;
+    animation: bubbleRight .1s ease;
+    background-color: rgba(70, 77, 83, .95);
+    border-radius: 7px;
+    color: #fff;
+    display: none;
+    font: 12px / 16px Roboto, Arial, sans-serif;
+    margin-left: 20px;
+    padding: 13px 18px;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.show {
+    display: block !important;
+}
+
+td.results-table__outcome span._win {
+    background-color: #7ca541;
+}
+
+td.results-table__outcome span._lose {
+    background-color: #d51d2a;
+}
+
+td.results-table__outcome span._tie {
+    background-color: #f8c027;
+}
+
+td.results-table__outcome span {
+    background-color: #94999f;
+    border-radius: 50%;
+    display: inline-block;
+    height: 6px;
+    margin: 2px;
+    width: 6px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+tr {
+    background-color: #f7f7ff;
+    margin-bottom: 1px;
+}
+
+tr:nth-child(2n) {
+    background-color: #fafaf2;
+    margin-bottom: 1px;
+}
+
+.table-item__logo {
+    img {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+._hidden-dt {
+    display: none !important;
+}
+
+
+/* FOR TABLE FROM SITE END */
+
+
+/* CAROUSEL styles */
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/* CAROUSEL styles END*/

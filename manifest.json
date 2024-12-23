@@ -1,0 +1,18 @@
+{
+    "name": "Matches extension",
+    "description": "Provide information about sports competitions",
+    "version": "1.0",
+    "manifest_version": 3,
+    "host_permissions": [
+        "*://www.championat.com/"
+    ],
+    "permissions": [
+        "tabs",
+        "notifications",
+        "fontSettings"
+    ],
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "hello_extensions.png"
+    }
+}
